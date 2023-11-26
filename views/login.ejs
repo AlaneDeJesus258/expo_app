@@ -13,9 +13,10 @@
     <div class="loginInfo">
         <h3>SISTEMA INTEGRADO DE GESTÃO ACADÉMICA</h3>
         <div class="formDiv">
-                <form action="">
-                <input type="text" placeholder="Codigo do Estudante"><br><br>
-                <input type="password" name="" id="" placeholder="Password"><br><br>
+                <form action="auth" method="post"> 
+                    <p style="color: red;"><%= title %></p>
+                <input type="text" placeholder="Codigo do Estudante" required><br><br>
+                <input type="password" name="" id="" placeholder="Password" required><br><br>
 
                 <button>INICIAR SESSAO</button>
 
