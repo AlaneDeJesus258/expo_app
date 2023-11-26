@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
-const User = require("../models/user");
+// const User = require("../models/user");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
-  const User = require("../models/user");
+  
 });
 
 router.get('/login', function(req, res, next) {
@@ -20,11 +20,11 @@ router.post('/login/auth', async (req, res, next) => {
   try {
     const { nome, password } = req.body;
 
-    // Verificar se o usuário existe no banco de dados
-    const user = await User.findOne({ nome, password });
-    console.log(req.body.nome + "   " + password)
+    // // Verificar se o usuário existe no banco de dados
+    // const user = await User.findOne({ nome, password });
+    // console.log(req.body.nome + "   " + password)
 
-    if (user) {
+    if (nome == '20123' & password == 'estudante123') {
     
       res.render('sistema', { title: 'Express' });
     } else {
