@@ -5,6 +5,7 @@ const User = require("../models/user");
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
+  const User = require("../models/user");
 });
 
 router.get('/login', function(req, res, next) {
