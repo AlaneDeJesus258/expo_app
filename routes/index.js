@@ -16,7 +16,7 @@ router.get('/sistema', function(req, res, next) {
   res.render('login', { title: '' });
 });
 
-router.post('/login/auth', async (req, res, next) => {
+router.post('/login/auth', (req, res, next) => {
   try {
     const { nome, password } = req.body;
 
