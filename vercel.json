@@ -1,13 +1,13 @@
 {
     "version": 2,
-    "builds": {
+    "builds": [{
         "src": "./app.js",
         "use": "@now/node-server"
-    },
-    "routes": {
+    }],
+    "routes": [{
         "src": "/(.*)",
         "dest": "./app.js"
-    },
+    }],
     "env": {
         "PORT": "3009"
       }
