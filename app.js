@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://alane:aLany0520%40%24@cluster0.edxtxte.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://alane:aLany0520@cluster0.edxtxte.mongodb.net/?retryWrites=true&w=majority";
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
