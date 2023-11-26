@@ -15,18 +15,19 @@ router.get('/sistema', function(req, res, next) {
   res.render('login', { title: '' });
 });
 
-router.get('/login/auth', async (req, res, next) => {
+router.post('/login/auth', async (req, res, next) => {
   try {
-    const { nome, pass } = req.body;
+    const { nome, password } = req.body;
 
     // Verificar se o usuário existe no banco de dados
-    const user = await User.findOne({ nome, pass });
+    const user = await User.findOne({ nome, password });
+    console.log(req.body.nome + "   " + password)
 
     if (user) {
-      res.send(`Usuário autenticado com sucesso: ${user}`);
+    
       res.render('sistema', { title: 'Express' });
     } else {
-      res.status(401).send('Credenciais inválidas');
+ 
       res.render('login', { title: 'Codigo de Estudante ou Palavra Passe incorrectos.' });
     }
   } catch (error) {
