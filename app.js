@@ -6,7 +6,8 @@ var logger = require('morgan');
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const uri = "mongodb+srv://alane:aLany0520@cluster0.edxtxte.mongodb.net/?retryWrites=true&w=majority";
-
+const User = require("./models/user");
+const mongoose = require("mongoose");
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
   serverApi: {
@@ -47,7 +48,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-// catch 404 and forward to error handler
+
+mongoose.connect(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+
+
 app.use(function(req, res, next) {
   next(createError(404));
 });
