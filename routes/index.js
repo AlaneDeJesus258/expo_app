@@ -37,7 +37,7 @@ router.post('/login/auth', (req, res, next) => {
     }
   } catch (error) {
     // Tratar erros de validação ou do banco de dados
-    res.status(400).send(`Erro: ${error.message}`);
+    res.status(400).send(`Erro: ${error.message} + ON AUTH`);
   }
 });
 
