@@ -17,7 +17,7 @@ h1, h2 {
 .logo {
   
   width: 20%;
-  height: 90%;
+  height: auto;
   background-color: rgb(88, 84, 84);
 }
 
@@ -34,7 +34,7 @@ h1, h2 {
 }
 
 .top_st_container {
-  background-color: #047d4b;
+  background-color: #83574eff;
   width: 100%;
   height: 100%;
   display: flex;
@@ -182,7 +182,7 @@ h1, h2 {
 .newsletter {
   width: 100%;
   height: 20%;
-  background-color: rgb(11, 130, 80)
+  background-color: #83574eff
 }
 
 input[type="email"] {

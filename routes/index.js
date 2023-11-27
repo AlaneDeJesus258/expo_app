@@ -15,6 +15,10 @@ router.get('/login', function(req, res, next) {
 router.get('/sistema', function(req, res, next) {
   res.render('login', { title: '' });
 });
+router.get('/cursos', function(req, res, next) {
+  res.render('cursos', { title: '' });
+});
+
 
 router.post('/login/auth', (req, res, next) => {
   try {

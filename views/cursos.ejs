@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/couses.css">
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="top">
+        <div class="top_st">
+            <div class="top_st_container">
+                <div class="top_st_x">
+                    <div class="logo">
+                        <img src="imgs/logo.jpg" alt="" style="width: 100%; height:auto;">
+                    </div>
+                </div>
+                <div class="top_st_x"></div>
+            </div>
+            
+
+        </div>
+        <div class="top_nd">
+            <div class="top_menu">
+                <ul class="top_list">
+                    <li><a href="http://">Inicio</a></li>
+                    <li><a href="http://">Sobre</a></li>
+                    <li><a href="http://">Cursos</a></li>
+                    <li><a href="http://">Contacto</a></li>
+                    <li><a href="http://">Sistema</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="ct_cursos">
+            <div class="ct_title">
+                <h2>Cursos</h2>
+            </div>
+            <div class="ct_main">
+                <div class="curso_title">
+                    <h2 style="text-align: left;">Informatica <i class="fa-solid fa-caret-down"></i></h2>
+                </div>
+                <div class="curso_info">
+                    <p> Ensino de informática na optica de utilizador; temos 3 fases, 
+                        cada fase com seus objetivos; o estudante pode ser certificado
+                        assim que terminar as três fases</p>
+                </div>
+            </div>
+            <div class="ct_main">
+                <div class="curso_title">
+                    <h2 style="text-align: left;">Ingles  <i class="fa-solid fa-caret-down"></i></h2>
+                </div>
+                <div class="curso_info">
+                    <p> Ensino de inglês; temos 4 fases e cada fases tem seus
+                         objetivos e na ultima fase, o estudante foca-se em 
+                         preparar o exame final, </p>
+                </div>
+            </div>
+            <div class="ct_main">
+                <div class="curso_title">
+                    <h2 style="text-align: left;">Aulas de musica <i class="fa-solid fa-caret-down"></i></h2>
+                </div>
+                <div class="curso_info">
+                    <p>Temos 3 fases, também cada uma com seus objetivos., </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var element = document.querySelectorAll(".curso_title")
+        var eleX = document.querySelectorAll(".curso_title")
+
+
+        for (let index = 0; index < element.length; index++) {
+
+            const elemento = element[index];
+
+            elemento.addEventListener("click", () => {
+                 var proximoIrmao = elemento.nextElementSibling;
+
+                if(proximoIrmao.style.display == "none"){
+                    proximoIrmao.style.display = "block"
+                } else {
+                    proximoIrmao.style.display = "none"
+                }
+            })
+        }
+           
+    </script>
+</body>
+</html>
